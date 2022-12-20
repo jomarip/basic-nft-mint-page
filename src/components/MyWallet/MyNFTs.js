@@ -14,7 +14,7 @@ import erc721abi from "../../contractABI/NFTABI.json";
 import axios from 'axios';
 
 const CONTRACT_ADDRESS = "0xe0290c183e9F63A6f28938051443D9Ed47710073";
-const MORALIS_KEY = process.env.PERSONAL_MORALIS_KEY;
+const MORALIS_KEY = process.env.PERSONMORALIS_KEY;
 
 const MyNFTs = () => {
 
@@ -41,6 +41,7 @@ const MyNFTs = () => {
         });
     };
 
+    //look into eliminating
     const getMyNFTs = async () => {
         setNftId({
             nftId: [],
