@@ -8,7 +8,7 @@ const CONNECT_TEXT = 'Connect Metamask';
 const CONNECTED_TEXT = 'Connected';
 
 // AVALANCHE CHAINS
-/*
+
 const AVALANCHE_MAINNET_PARAMS = {
   chainId: '0xA86A',
   chainName: 'Avalanche Mainnet C-Chain',
@@ -20,7 +20,7 @@ const AVALANCHE_MAINNET_PARAMS = {
   rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
   blockExplorerUrls: ['https://snowtrace.io/']
 }
-*/
+/*
 const AVALANCHE_TESTNET_PARAMS = {
   chainId: '0xA869',
   chainName: 'Avalanche Testnet C-Chain',
@@ -32,8 +32,8 @@ const AVALANCHE_TESTNET_PARAMS = {
   rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
   blockExplorerUrls: ['https://testnet.snowtrace.io/']
 }
-
-const ACTIVE_CHAIN = AVALANCHE_TESTNET_PARAMS;
+*/
+const ACTIVE_CHAIN = AVALANCHE_MAINNET_PARAMS;
 
 const isChain = (chainId) => (
   chainId &&

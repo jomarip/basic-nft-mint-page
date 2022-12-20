@@ -8,7 +8,7 @@ import { ethers } from "ethers";
 
 import erc721abi from "../../contractABI/NFTABI.json";
 
-const CONTRACT_ADDRESS = "0x350D6F72F095B20cc25aD6FAc7908cAF7ba2C617";
+const CONTRACT_ADDRESS = "0xe0290c183e9F63A6f28938051443D9Ed47710073";
 
 const TokenInfo = () => {
 

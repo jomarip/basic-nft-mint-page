@@ -13,8 +13,8 @@ import erc721abi from "../../contractABI/NFTABI.json";
 
 import axios from 'axios';
 
-const CONTRACT_ADDRESS = "0x350D6F72F095B20cc25aD6FAc7908cAF7ba2C617";
-const MORALIS_KEY = "YOUR-MORALIS-KEY";
+const CONTRACT_ADDRESS = "0xe0290c183e9F63A6f28938051443D9Ed47710073";
+const MORALIS_KEY = "POST YOURS HERE";
 
 
 const MyNFTs = () => {
@@ -104,7 +104,7 @@ const MyNFTs = () => {
                 </Col>
                 <Col>
                     <h5>
-                        Balance <Badge bg="secondary">{balanceInfo.balance}</Badge> <Button variant="primary" onClick={() => getMyNFTs()}>Show My NFTs</Button>
+                        Balance <Badge bg="secondary">{balanceInfo.balance}</Badge> {/*<Button variant="primary" onClick={() => getMyNFTs()}>Show My NFTs</Button>*/}
                     </h5>
                 </Col>
             </Row>

@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 
 import Image from '../../img/nft.png';
 
-const CONTRACT_ADDRESS = "0x350D6F72F095B20cc25aD6FAc7908cAF7ba2C617";
+const CONTRACT_ADDRESS = "0xe0290c183e9F63A6f28938051443D9Ed47710073";
 
 const MintSection = () => {
 
@@ -22,7 +22,7 @@ const MintSection = () => {
     const signer = await provider.getSigner();
     const signerAddress = await signer.getAddress();
     const erc721 = new ethers.Contract(CONTRACT_ADDRESS, erc721abi, signer);
-    await erc721.safeMint(signerAddress);
+    await erc721.mint(signerAddress,1,{ value: ethers.utils.parseUnits("20", "ether") });
   };
 
   const getSupplys = async () => {
@@ -31,11 +31,11 @@ const MintSection = () => {
     await provider.send("eth_requestAccounts", []);
     const signer = await provider.getSigner();
     const erc721 = new ethers.Contract(CONTRACT_ADDRESS, erc721abi, signer);
-    const checkSupply = await erc721.getSupply();
-    const checkTotalSupply = await erc721.getTotalSupply();
+    const checkSupply = await erc721.getCollectionInfo(1);
+    const checkTotalSupply = await erc721.getCollectionInfo(1);
     setSupplys({
-      supply: parseInt(checkSupply._hex, 16),
-      totalSupply: parseInt(checkTotalSupply._hex, 16)
+      supply: parseInt(checkSupply[0]._hex, 16),
+      totalSupply: parseInt(checkTotalSupply[1]._hex, 16)
     })
 
   }
@@ -48,9 +48,9 @@ const MintSection = () => {
       <Card className="text-center">
         <Card.Header><strong>Mint</strong></Card.Header>
         <Card.Body>
-          <Card.Title>NFT NAME - AVALANCHE</Card.Title>
+          <Card.Title>Rithm Art Curatorship</Card.Title>
           <Card.Text>
-            Mint time 01.01.2023 - 19:00 UTC
+            Membership Mints are Open (20 AVAX)
           </Card.Text>
           <Card.Img style={{ maxWidth: "300px" }} variant="top" src={Image} />
           <Card.Text className="mt-3">

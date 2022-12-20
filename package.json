@@ -2,6 +2,12 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "devDependency": {
+    "@svgr/webpack":"^6.2.1"
+  },
+  "overrides": {
+    "@svgr/webpack": "$@svgr/webpack"
+  },
   "dependencies": {
     "@metamask/onboarding": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.5",
