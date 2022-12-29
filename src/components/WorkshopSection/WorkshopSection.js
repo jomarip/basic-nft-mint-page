@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
 
-import Image from '../../img/nft.png';
+import Image from '../../img/dustyCity.png';
 
 const CONTRACT_ADDRESS = "0x46C7D3AD69d82360047BdC4204891483610365cC";
 
@@ -50,7 +50,7 @@ const WorkshopSection = () => {
         <Card.Body>
           <Card.Title>Workshop of Abominable Sasquatch</Card.Title>
           <Card.Text>
-            Membership Mints are Open (2 AVAX)
+            Workshop Mints are Open (2 AVAX)
           </Card.Text>
           <Card.Img style={{ maxWidth: "300px" }} variant="top" src={Image} />
           <Card.Text className="mt-3">

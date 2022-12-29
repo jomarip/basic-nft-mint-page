@@ -12,6 +12,7 @@ function TopNav() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/workshop">Workshop</Nav.Link>
             <Nav.Link href="/mywallet">MyWallet</Nav.Link>
           </Nav>
         </Navbar.Collapse>
