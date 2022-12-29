@@ -22,7 +22,7 @@ const WorkshopSection = () => {
     const signer = await provider.getSigner();
     const signerAddress = await signer.getAddress();
     const erc721 = new ethers.Contract(CONTRACT_ADDRESS, erc721abi, signer);
-    await erc721.mint(signerAddress,1,{ value: ethers.utils.parseUnits("20", "ether") });
+    await erc721.mint(signerAddress,1,{ value: ethers.utils.parseUnits("2", "ether") });
   };
 
   const getSupplys = async () => {
